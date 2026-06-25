@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar Java Script</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kalkulator-container">
+    <h2>Kalkulator Wisata</h2>
+    <form id="form-kalkulator">
+        <label for="">Nama kepala Rombongan</label>
+        <input type="text" id="Nama kepala Rombongan" min="1" required>
+
+        <label for="jumlah-orang">Jumlah Rombongan (Orang):</label>
+        <input type="number" id="jumlah-orang" min="1" required>
+
+        <label for="lama-hari">Lama Menginap (Hari):</label>
+        <input type="number" id="lama-hari" min="1" required>
+
+        <label for="paket-wisata">Pilihan Paket:</label>
+        <select id="paket-wisata" required>
+            <option value="">-- Pilih Paket --</option>
+            <option value="500000">Paket Hemat (Rp 500.000/hari/orang)</option>
+            <option value="850000">Paket Premium (Rp 850.000/hari/orang)</option>
+        </select>  
+
+    <fieldset style="margin: 15px 0; padding: 10px; border: 1px solid 
+        #ccc;">
+
+        <legend>Layanan Tambahan (Opsional):</legend>
+        <label>
+            <input type="checkbox" id="cek-asuransi" value="50000">
+            Asuransi Perjalanan (Rp 50.000 / orang)
+        </label><br>
+        <label>
+            <input type="checkbox" id="cek-fotografer" value="300000">
+            Fotografer (Rp 300.000 / hari) - <i>Min. 2 Hari</i>
+        </label>
+        <label for="kode-promo">Punya Kode Promo?</label>
+        <input type="text" id="kode-promo" placeholder="Masukkan kode di sini...">
+    </fieldset>
+
+        <button type="submit">Hitung Estimasi</button>
+    </form>
+
+    <div id="hasil-kalkulasi" class="hidden">
+        <h3>Rincian Biaya:</h3>
+        <p id="Nama ketua Rombongan">
+        <p id="teks-rincian"></p>
+        <h4 id="teks-total"></h4>
+    </div>
+</div>
+<script src="script.js"></script>    
+</body>
+</html>
+
